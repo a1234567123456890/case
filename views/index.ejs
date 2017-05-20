@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+		<script type="text/javascript" src='/javascripts/angular.min.js' charset="utf-8"></script>
+		<script type="text/javascript" src='/javascripts/jquery-2.2.3.min.js' charset="utf-8"></script>
+		<script type="text/javascript" src='/javascripts/bootstrap.min.js' charset="utf-8"></script>
+  </head>
+  <body ng-app>
+	  <header>
+			<div class="wrap">
+			  	<img src="/images/logo.gif"/>
+			  	<span class="s1"><p>充满鲜花的世界到底在哪里</p><p>如果它真的存在</p><p>那么我一定要去&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp--&nbsp<追梦赤子心></p></span>
+			  	<% if(!user){ %>
+			  	<button onclick="location.href='/login'" class="btn btn-default">登录</button>
+			   	<button onclick="location.href='/register'" class="btn btn-default">注册</button>
+					<% }else{ %>
+			  	<div style="float:right" class="wel"><span>欢迎：<%- user %>!</span><button id="tuichu" onclick="location.href='/relogin'" class="btn btn-default">退出</button></div>
+					<% } %>
+			</div>
+		</header>
+		
+	  <div class="nav">
+	  	<div class="wrap">
+	  		<ul class="nav nav-tabs">
+				  <li class="active"><a href="#a" data-toggle="tab">主页</a></li>
+				  <li><a href="#b" data-toggle="tab">个人日记</a></li>
+				  <li><a href="#c" data-toggle="tab">HTML5</a></li>
+				  <li><a href="#d" data-toggle="tab">关于博主</a></li>
+				  <li><a href="#liuyan.ejs" data-toggle="tab">留言板</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="a">111111</div>
+					<div class="tab-pane" id="b">22222</div>
+					<div class="tab-pane" id="c">3333</div>
+					<div class="tab-pane" id="d">4444</div>
+					<div class="tab-pane" id="e" ng-include="'liuyan.ejs'">5555</div>
+				</div>
+	  	</div>
+	  </div>
+	  
+	  
+	  <button onclick="location.href='/liuyan'">留言</button>
+	  
+	  
+  </body>
+  		
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<%- include('header.ejs')%>
+	<form action="/users/list" method="post">
+		标题：<input type="text" name="title" class="biaoti"/><br />
+		<div class="div1">内容：</div><textarea name="con" class="con" ></textarea><br />
+		<input type="submit" value="发布留言" class="send"/>
+	</form>
+</body>
+</html>
